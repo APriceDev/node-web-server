@@ -3,6 +3,7 @@ const hbs = require('hbs');
 const fs = require('fs');
 
 const app = express();
+const port = 8100;
 
 app.set('view engine', 'hbs');
 hbs.registerPartials(`${__dirname}/views/partials`);
@@ -58,6 +59,6 @@ app.get('/bad', (req, res) => {
   });
 });
 
-app.listen(port = 8100, () => {
+app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
