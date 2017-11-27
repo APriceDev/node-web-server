@@ -3,7 +3,7 @@ const hbs = require('hbs');
 const fs = require('fs');
 
 const app = express();
-const port = 8000;
+const port = 3000;
 
 app.set('view engine', 'hbs');
 hbs.registerPartials(`${__dirname}/views/partials`);
@@ -32,8 +32,8 @@ app.use(express.static(`${__dirname}/public`));
 // register htttp route handlers
 app.get('/', (req, res) => {
   res.render('home.hbs', {
-    pageTitle: 'BPI',
-    welcomeMessage: 'Welcome to BPI',
+    pageTitle: 'Home',
+    welcomeMessage: 'Welcome to home',
   });
   // send a string
   // res.send('<h1>Hello Express!</h1>');
